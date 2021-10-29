@@ -1,11 +1,15 @@
 import './App.css';
-import NavBar from './components/navbar/navbar';
+import SearchBar from './components/searchBar/SearchBar';
+import { ProductsProvider } from './context/ProductsContext';
 import ItemListContainer from './layouts/ItemListContainer';
 
 function App() {
   return (
     <div className="App">
-      <NavBar/>
+      <ProductsProvider>
+      <SearchBar /> 
+      <ItemListContainer />
+      </ProductsProvider>
     </div>
   );
 }
